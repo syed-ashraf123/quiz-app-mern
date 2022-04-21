@@ -1,0 +1,12 @@
+.anchor {
+  text-decoration: white;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.anchor:hover {
+  color: white;
+}
+.App {
+  background-color: aqua;
+}

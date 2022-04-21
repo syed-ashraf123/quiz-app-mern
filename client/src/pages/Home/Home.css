@@ -1,0 +1,17 @@
+.header {
+  margin-top: 1rem;
+  margin-bottom: 1em;
+}
+
+.container,
+.box {
+  height: 100vh;
+}
+
+.startbutton {
+  height: 5vh;
+}
+
+.quitButton {
+  margin-right: 1vh !important;
+}
