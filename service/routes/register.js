@@ -11,18 +11,14 @@ router.post("/", async (req, res) => {
 
   //If email exists than change name
   if (emailExist) {
-    if (emailExist.name !== req.body.name) {
-      const filter = { email: req.body.email };
-      delete req.body.email;
-      const update = req.body;
-      const updatedUser = await User.findOneAndUpdate(filter, update, {
-        new: true,
-      });
-      // Send the updated user
-      return res.status(202).send({ user: updatedUser });
-    }
-    //If email exists and name is same than send the user
-    return res.status(200).send({ user: emailExist });
+    const filter = { email: req.body.email };
+    delete req.body.email;
+    const update = req.body;
+    const updatedUser = await User.findOneAndUpdate(filter, update, {
+      new: true,
+    });
+    // Send the updated user
+    return res.status(202).send({ user: updatedUser });
   }
 
   //Saving in Database // Creating a User
